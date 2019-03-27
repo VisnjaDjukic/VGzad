@@ -1,0 +1,17 @@
+[
+    {
+        "imgSrc": "./images/carousel_images/starburst1.jpg",
+        "imgName": "Itaque earum rerum hic tenetur",
+        "imgDes":"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti"
+    },
+    {
+        "imgSrc": "./images/carousel_images/starburst2.jpg",
+        "imgName": "Nam libero tempore, cum soluta",
+        "imgDes":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in urna quis neque porttitor sagittis."
+    },
+    {
+        "imgSrc": "./images/carousel_images/starburst3.jpg",
+        "imgName": "Itaque earum rerum hic tenetur",
+        "imgDes":"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+    }
+]

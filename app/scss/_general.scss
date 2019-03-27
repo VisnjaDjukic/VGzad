@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .container {
+    overflow: auto;
+    @include phone {
+      min-width: 275px;
+      margin: 0 22.5px;
+    }
+    @include tablet {
+      // min-width: 720px; //ovo proveri?
+      margin: 0 24px;
+    }
+    @include desktop {
+      width: 1180px;
+      margin: 0 auto;
+    }
+  }

@@ -1,0 +1,78 @@
+.hero-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  .hero-text {
+    font-family: "Museosans100";
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    a {
+      font-family: "Museosans700";
+      color: white;
+      text-decoration: none;
+      background-color: $color-blue;
+      font-size: 18px;
+      padding: 16px;
+      border-radius: 25px;
+    }
+  }
+
+  @include phone {
+    min-width: 320px;
+    background-image: url("../images/hero_images/hero_mobile.png");
+    padding-top: 59.375%;
+
+    .hero-text {
+      font-size: 25px;
+      line-height: 30px;
+
+      p {
+        width: 275px;
+        padding-bottom: 15px;
+      }
+
+      a {
+        font-size: 13px;
+        padding: 12px;
+        border-radius: 37.5px;
+      }
+    }
+  }
+
+  @include tablet {
+    background-image: url("../images/hero_images/hero_tablet.png");
+    padding-top: 65.104%;
+
+    .hero-text {
+      font-size: 40px;
+      line-height: 50px;
+
+      p {
+        width: 600px;
+        padding-bottom: 35px;
+      }
+    }
+  }
+
+  @include desktop {
+    background-image: url("../images/hero_images/hero_desktop.png");
+    padding-top: 53.049%;
+
+    .hero-text {
+      font-size: 60px;
+      line-height: 75px;
+
+      p {
+        width: 800px;
+        padding-bottom: 55px;
+      }
+    }
+  }
+}

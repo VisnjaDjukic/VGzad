@@ -1,0 +1,74 @@
+main.container {
+  font-family: "Museosans300";
+  color: $color-text;
+
+  span.blue {
+    color: $color-blue;
+  }
+
+  ul {
+    list-style-type: circle;
+    list-style-position: inside;
+
+    li:nth-child(2) {
+      margin: 15px 0;
+    }
+  }
+
+  @include phone {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    line-height: 17px;
+
+    p,
+    ul,
+    h2 {
+      padding-top: 20px;
+    }
+    h1 {
+      font-size: 20px;
+    }
+    h2 {
+      font-size: 14px;
+    }
+    .mob-hidden {
+      display: none;
+    }
+  }
+  @include tablet {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 16px;
+    line-height: 26px;
+
+    p,
+    ul,
+    h2 {
+      padding-top: 40px;
+    }
+    h1 {
+      font-size: 30px;
+    }
+    h2 {
+      font-size: 24px;
+    }
+  }
+  @include desktop {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-size: 18px;
+    line-height: 30px;
+    p,
+    ul,
+    h2 {
+      padding-top: 40px;
+    }
+    h1 {
+      font-size: 40px;
+    }
+    h2 {
+      font-size: 26px;
+    }
+  }
+}

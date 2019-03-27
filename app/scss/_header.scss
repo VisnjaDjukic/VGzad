@@ -1,0 +1,182 @@
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+  
+    .logo,
+    .menu {
+      display: block;
+    }
+    .menu {
+      cursor: pointer;
+    }
+  
+    ul {
+      display: none;
+    }
+  
+    @include phone {
+      height: 65px;
+      nav {
+        display: none;
+      }
+      .logo {
+        width: 100px;
+      }
+      .menu {
+        width: 31.5px;
+      }
+      .list {
+        display: none;
+      }
+    }
+  
+    @include tablet {
+      nav {
+        display: none;
+      }
+      .logo {
+        width: 139px;
+      }
+      .menu {
+        width: 40px;
+      }
+      .list {
+        display: none;
+      }
+    }
+  
+    @include desktop {
+      .menu {
+        display: none;
+      }
+      .list {
+        display: block;
+      }
+    }
+  }
+  
+  .bp {
+    position: relative;
+  }
+  
+  .move {
+    @include phone {
+      position: relative;
+      right: 80%;
+    }
+    @include tablet {
+      position: relative;
+      right: 73%;
+    }
+  }
+  
+  .dropdown {
+    display: block;
+    position: absolute;
+    background-color: $color-text;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    @include phone {
+      width: 80%;
+    }
+    @include tablet {
+      width: 73%;
+    }
+  
+    .bar {
+      border-top: 1px solid white;
+  
+      @include phone {
+        margin-top: 64px;
+        padding: 35px 30px 0 30px;
+      }
+      @include tablet {
+        margin-top: 79px;
+        padding: 50px 100px 20px 100px;
+      }
+      @include tablet {
+        
+        padding: 50px 100px 20px 100px;
+      }
+  
+      li {
+        font-family: "Museosans700";
+        list-style-type: none;
+        @include phone {
+          font-size: 18px;
+          padding-bottom: 32px;
+        }
+        @include tablet {
+          font-size: 20px;
+          padding-bottom: 45px;
+        }
+      }
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+  
+  .icons {
+   
+    height: 26px;
+    li {
+      position: absolute;
+      list-style: none;
+      @include phone {
+      margin-left:30px;
+    }
+      @include tablet {
+      margin-left:100px;
+    }
+  }
+    li,
+    a {
+      height: 26px;
+      display: block;
+    }
+    #fb {
+      left: 0;
+      width: 26px;
+      background: url("../images/header_images/social.png")0 0;
+    }
+    #tw {
+      left: 61px;
+      width: 28px;
+      background: url("../images/header_images/social.png") -59px 0;
+    }
+    #yt {
+      left: 119px;
+      width: 30px;
+      background: url("../images/header_images/social.png") -115px 0;
+    }
+  }
+
+  @include desktop {
+    header .container nav {
+      font-family: "Museosans700";
+      font-size: 18px;
+      text-decoration: none;
+      padding: 0;
+      margin-top: 0;
+      display: flex;
+  
+      li {
+        list-style-type: none;
+        margin: 0 0 0 45px;
+        a {
+          text-decoration: none;
+          padding-bottom: 25px;
+          color: $color-text;
+        }
+      }
+      a:hover {
+        border-bottom: 5px solid $color-blue;
+      }
+    }
+  }

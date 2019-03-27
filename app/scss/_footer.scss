@@ -1,0 +1,60 @@
+footer {
+  font-family: "Museosans500";
+  color: $footer-text;
+  background-color: $footer-bcg;
+  border-top: 2px solid $footer-line;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+
+    p {
+      font-size: 14px;
+      a {
+        color: $color-blue;
+        text-decoration: none;
+      }
+    }
+
+    ul {
+      width: 62px;
+      height: 13px;
+      position: relative;
+
+      li {
+        position: absolute;
+        list-style: none;
+      }
+      li,
+      a {
+        height: 12.5px;
+        display: block;
+      }
+      #facebook {
+        left: 0;
+        width: 12.5px;
+        background: url("../images/footer_images/social.gif") 0 0;
+      }
+      #twitter {
+        left: 23px;
+        width: 14px;
+        background: url("../images/footer_images/social.gif") -24px 0;
+      }
+      #youtube {
+        left: 47px;
+        width: 15px;
+        background: url("../images/footer_images/social.gif") -47px 0;
+      }
+    }
+  }
+}
+
+@include phone {
+  footer .container {
+    height: 65px;
+    p {
+      font-size: 11px;
+    }
+  }
+}

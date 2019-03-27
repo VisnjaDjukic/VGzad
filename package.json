@@ -2,11 +2,11 @@
   "name": "vega-zadatak",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Visnja Djukic",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.3",

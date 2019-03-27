@@ -1,0 +1,129 @@
+.news {
+  font-family: "Museosans300";
+  color: $color-dark;
+  background-color: $background-grey;
+  overflow: auto;
+
+  h1 {
+    font-family: "Museosans100";
+    text-align: center;
+
+    @include phone {
+      font-size: 22.5px;
+      padding-top: 25px;
+      padding-bottom: 15px;
+    }
+
+    @include tablet {
+      font-size: 35px;
+      padding-top: 60px;
+      padding-bottom: 50px;
+    }
+    @include desktop {
+      font-size: 50px;
+      padding-top: 110px;
+      padding-bottom: 60px;
+    }
+  }
+  .grid {
+    @include phone {
+      article {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 10px;
+        padding-bottom: 30px;
+        padding-top: 15px;
+      }
+      article:nth-of-type(2) {
+        border-top: 1px $grey-line solid;
+        border-bottom: 1px $grey-line solid;
+      }
+    }
+  }
+
+  a {
+    font-family: "Museosans700";
+    color: $color-blue;
+    text-decoration: none;
+    border: 3px $color-blue solid;
+    display: block;
+    text-align: center;
+    padding: 9px;
+    font-size: 16px;
+    border-radius: 20px;
+    width: 148px;
+    @include phone {
+      font-size: 13px;
+      border-radius: 37.5px;
+      margin: 42.5px auto 50px auto;
+      width: 124px;
+    }
+    @include tablet {
+      margin: 75px auto 40px auto;
+    }
+    @include desktop {
+      margin: 110px auto;
+    }
+  }
+}
+
+@include phone {
+  .image {
+    position: relative;
+    padding-top: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  .text {
+    p {
+      padding-bottom: 20px;
+      font-size: 13px;
+    }
+    h2 {
+      font-size: 15px;
+    }
+  }
+}
+
+@include tablet {
+  .grid {
+    margin: 0 24px;
+
+    .text {
+      padding-top: 25px;
+      p {
+        font-size: 14px;
+        padding-bottom: 20px;
+      }
+      h2 {
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+    .image img {
+      width: 100%;
+    }
+  }
+}
+
+@include desktop {
+  .grid {
+    margin: 0 auto;
+    .text p {
+      font-size: 18px;
+      padding-bottom: 30px;
+    }
+    .text h2 {
+      font-size: 30px;
+      line-height: 44px;
+    }
+  }
+}

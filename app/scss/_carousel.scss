@@ -1,0 +1,184 @@
+
+.wrapper {
+    position: relative;
+    min-width: 320px;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  
+    .slide.active {
+      display: block;
+    }
+  
+    .slide {
+      display: none;
+    }
+  }
+  #carousel {
+    position: relative;
+  
+    .container {
+      position: absolute;
+      z-index: 5;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin-top: auto;
+      margin-bottom: auto;
+      @include phone {
+        height: 21px;
+      }
+      @include tablet {
+        height: 42px;
+      }
+      @include desktop {
+        height: 65px;
+      }
+      .prev,
+      .next {
+        cursor: pointer;
+      }
+      .prev {
+        display: none;
+      }
+      .next {
+        float: right;
+      }
+    }
+  }
+  
+  #carousel a {
+    text-align: center;
+  
+    .left,
+    .right {
+      display: inline-block;
+      border-radius: 50%;
+      @include phone {
+        width: 21px;
+        height: 21px;
+        border: 1.5px solid white;
+      }
+      @include tablet {
+        width: 42px;
+        height: 42px;
+        border: 3px solid white;
+      }
+      @include desktop {
+        width: 65px;
+        height: 65px;
+        border: 5px solid white;
+      }
+    }
+    .left:after,
+    .right:after {
+      content: "";
+      @include phone {
+        font-size: 21px;
+      }
+      @include tablet {
+        font-size: 42px;
+      }
+      @include desktop {
+        font-size: 65px;
+      }
+  
+      display: inline-block;
+      margin-top: 0.25em;
+      width: 0.2em;
+      height: 0.2em;
+      border-top: 0.07em solid white;
+      border-right: 0.07em solid white;
+    }
+    .left:after {
+      margin-left: 0.1em;
+      transform: rotate(-135deg);
+      @include phone {
+        margin-bottom: 0.15em;
+      }
+    }
+    .right:after {
+      margin-left: -0.1em;
+      transform: rotate(45deg);
+      @include phone {
+        margin-bottom: 0.15em;
+      }
+    }
+  }
+  
+  #carousel {
+    .text {
+      position: absolute;
+      color: white;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  
+      @include tablet {
+        width: 600px;
+      }
+      @include desktop {
+        width: 900px;
+      }
+  
+      .name {
+        font-family: "Museosans100";
+        @include phone {
+          font-size: 16px;
+          line-height: 20px;
+          padding: 0;
+        }
+        @include tablet {
+          font-size: 34px;
+          padding-bottom: 30px;
+        }
+        @include desktop {
+          font-size: 60px;
+          padding-bottom: 50px;
+        }
+      }
+      .des {
+        font-family: "Museosans300";
+        @include phone {
+          display: none;
+        }
+        @include tablet {
+          display: block;
+          font-size: 16px;
+          line-height: 20px;
+          padding-bottom: 50px;
+        }
+        @include desktop {
+          display: block;
+          font-size: 18px;
+          line-height: 30px;
+          padding: 0 180px 60px 180px;
+        }
+      }
+    }
+    .btnContact,
+    .btnRead {
+      font-family: "Museosans700";
+      text-decoration: none;
+      position: absolute;
+      color: white;
+      width: 130px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      text-align: center;
+      font-size: 14px;
+      padding: 12px;
+      background-color: $color-blue;
+      border-radius: 50px;
+      top: 70%;
+      z-index: 1;
+      @include phone {
+        display: none;
+      }
+    }
+  }

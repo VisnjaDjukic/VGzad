@@ -1,0 +1,31 @@
+
+  [class*="col"] {
+    float: left;
+    box-sizing: border-box;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  
+    @include phone {
+      column-gap: 10px;
+    }
+    @include tablet {
+      column-gap: 24px;
+    }
+    @include desktop {
+      column-gap: 20px;
+    }
+  }
+  $numColumns: 12;
+  
+  @each $size, $abbr in (0, s), (768px, m), (1180px, l) {
+    @media (min-width: $size) {
+      @for $i from 1 through $numColumns {
+        .col-#{$abbr}-#{$i} {
+          grid-column-end: span $i;
+        }
+      }
+    }
+  }
